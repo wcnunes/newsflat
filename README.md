@@ -26,3 +26,44 @@ git clone https://github.com/wcnunes/newsflat.git
 cd newsflat
 chmod +x newsflat.sh
 sudo cp newsflat.sh /usr/local/bin/newsflat
+
+## Instale dependências (Debian/Ubuntu)
+sudo apt update
+sudo apt install -y curl jq xmlstarlet fzf less w3m notify-osd libnotify-bin
+
+## Configure
+mkdir -p ~/.newsflat
+cp -r .newsflat.example/* ~/.newsflat/
+
+## Ajuda
+newsflat help
+
+# Manual de Uso - NewsFlat
+
+## Comandos principais
+- `newsflat add-feed <URL>` → adiciona novo feed
+- `newsflat list-feeds` → lista feeds
+- `newsflat update` → atualiza
+- `newsflat show` → abre interface
+- `newsflat help` → mostra ajuda
+
+## Navegação
+- Dentro do `newsflat show` (fzf):
+  - `↑/↓` mover entre itens
+  - `/texto` pesquisar
+  - `Enter` abrir item
+
+- Dentro de um item (`less`):
+  - `q` sair
+  - `/` pesquisar no conteúdo
+  - `n` próximo resultado
+  - `g` início
+  - `G` fim
+
+## Exemplos
+```bash
+newsflat add-feed https://news.ycombinator.com/rss
+newsflat update
+newsflat show
+
+
