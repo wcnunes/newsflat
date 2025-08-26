@@ -1,0 +1,17 @@
+{
+  "frame_width": 100,
+  "preview_lines": 20,
+  "colors": {
+    "headline": "1;36",
+    "author": "0;33",
+    "category": "1;35",
+    "badge": "1;32",
+    "quote": "0;37",
+    "code": "0;32",
+    "background": ""
+  },
+  "use_nerd_font": true,
+  "poll_interval": 300,
+  "notify_on_new": true,
+  "max_items_fetch": 50
+}
